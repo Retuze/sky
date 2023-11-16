@@ -1,0 +1,12 @@
+
+@font-face{
+    font-family: "tzy";
+    font-display: swap;
+    src: url("/sky/font/ZhuZiAWan.woff2") format("woff2");
+}
+
+@font-face{
+    font-family: "JetBrains";
+    font-display: swap;
+    src: url("/sky/font/JetBrainsMono-Regular.woff2") format("woff2");
+}
