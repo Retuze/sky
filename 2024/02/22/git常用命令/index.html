@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>git常用命令 | RETUZE</title><meta name="author" content="Retuze"><meta name="copyright" content="Retuze"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Git常用命令的深入解析 在软件开发中，Git作为版本控制工具已经变得不可或缺。它帮助我们管理代码，跟踪更改，并与团队成员协作。虽然Git有很多命令，但以下是一些常用命令及其更多用法的详细介绍。  git clone  用法：git clone [url] 描述：该命令用于从远程仓库复制整个项目到本地。你可以使用此命令快速设置本地开发环境。   git add  用法：git add &lt;fi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git常用命令">
+<meta property="og:url" content="https://retuze.github.io/sky/2024/02/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="RETUZE">
+<meta property="og:description" content="Git常用命令的深入解析 在软件开发中，Git作为版本控制工具已经变得不可或缺。它帮助我们管理代码，跟踪更改，并与团队成员协作。虽然Git有很多命令，但以下是一些常用命令及其更多用法的详细介绍。  git clone  用法：git clone [url] 描述：该命令用于从远程仓库复制整个项目到本地。你可以使用此命令快速设置本地开发环境。   git add  用法：git add &lt;fi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/75458480?v=4">
+<meta property="article:published_time" content="2024-02-22T13:16:22.000Z">
+<meta property="article:modified_time" content="2024-02-22T13:25:57.379Z">
+<meta property="article:author" content="Retuze">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/75458480?v=4"><link rel="shortcut icon" href="/sky/img/letter-r.ico"><link rel="canonical" href="https://retuze.github.io/sky/2024/02/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/sky/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/sky/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'git常用命令',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-02-22 21:25:57'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/sky/font/font.css"><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/75458480?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/sky/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/sky/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/sky/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/sky/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sky/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/sky/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/sky/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sky/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/sky/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/sky/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/sky/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/sky/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/sky/" title="RETUZE"><span class="site-name">RETUZE</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/sky/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sky/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/sky/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/sky/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sky/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/sky/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/sky/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/sky/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/sky/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">git常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-22T13:16:22.000Z" title="发表于 2024-02-22 21:16:22">2024-02-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-22T13:25:57.379Z" title="更新于 2024-02-22 21:25:57">2024-02-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="git常用命令"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>Git常用命令的深入解析</strong></p>
+<p>在软件开发中，Git作为版本控制工具已经变得不可或缺。它帮助我们管理代码，跟踪更改，并与团队成员协作。虽然Git有很多命令，但以下是一些常用命令及其更多用法的详细介绍。</p>
+<ol>
+<li><p><strong>git clone</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git clone [url]</code></li>
+<li><strong>描述</strong>：该命令用于从远程仓库复制整个项目到本地。你可以使用此命令快速设置本地开发环境。</li>
+</ul>
+</li>
+<li><p><strong>git add</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git add &lt;file&gt;</code> 或 <code>git add .</code></li>
+<li><strong>描述</strong>：此命令将文件或目录添加到暂存区，准备提交。使用<code>.</code>可以将当前目录下的所有更改添加到暂存区。</li>
+</ul>
+</li>
+<li><p><strong>git commit</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git commit -m &quot;Commit message&quot;</code></li>
+<li><strong>描述</strong>：此命令将暂存区的更改提交到本地仓库，并附带一条提交信息。</li>
+<li><strong>更多选项</strong>：<ul>
+<li><code>-a</code>：将所有已跟踪的文件的更改添加到暂存区并提交。</li>
+<li><code>--amend</code>：修改上一次的提交。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>git diff</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git diff</code> 或 <code>git diff --staged</code></li>
+<li><strong>描述</strong>：此命令显示工作区与暂存区之间或暂存区与最后一次提交之间的差异。</li>
+<li><strong>更多选项</strong>：<ul>
+<li><code>--staged</code>：查看已暂存但尚未提交的更改。</li>
+<li><code>--cached</code>：与<code>--staged</code>相同。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>git reset</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git reset &lt;file&gt;</code> 或 <code>git reset --hard</code></li>
+<li><strong>描述</strong>：此命令将文件从暂存区移出，并可以选择性地回退到某个提交。</li>
+<li><strong>更多选项</strong>：<ul>
+<li><code>--hard</code>：回退到指定的提交，并丢弃所有更改。</li>
+<li><code>--soft</code>：回退到指定的提交，但保留所有更改在暂存区。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>git status</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git status</code></li>
+<li><strong>描述</strong>：此命令显示工作区的状态，包括哪些文件已更改、已暂存和未暂存。</li>
+</ul>
+</li>
+<li><p><strong>git rm</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git rm &lt;file&gt;</code></li>
+<li><strong>描述</strong>：此命令从工作区和暂存区删除文件。</li>
+<li><strong>更多选项</strong>：<ul>
+<li><code>-r</code>：递归删除目录及其内容。</li>
+<li><code>--cached</code>：仅从暂存区删除文件，工作区保留。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>git log</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git log</code></li>
+<li><strong>描述</strong>：此命令显示提交历史记录。</li>
+<li><strong>更多选项</strong>：<ul>
+<li><code>-p</code>：显示每次提交的差异。</li>
+<li><code>--oneline</code>：简洁显示提交历史。</li>
+<li><code>--graph</code>：以图形方式显示提交历史。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>git branch</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git branch</code></li>
+<li><strong>描述</strong>：此命令列出所有本地分支。</li>
+<li><strong>更多选项</strong>：<ul>
+<li><code>-r</code>：列出所有远程分支。</li>
+<li><code>-a</code>：列出所有本地和远程分支。</li>
+<li><code>[branchName]</code>：创建一个新分支。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>git checkout</strong></p>
+<ul>
+<li><strong>用法</strong>：<code>git checkout &lt;branchName&gt;</code></li>
+<li><strong>描述</strong>：此命令用于切换分支。</li>
+<li><strong>更多选项</strong>：<ul>
+<li><code>-b</code>：创建一个新分支并立即切换到该分支。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>这只是Git命令的一部分，实际上Git还有许多其他功能和选项等待你去探索。通过熟练掌握这些命令，你将能够更加高效地使用Git进行版本控制和团队协作。</p>
+<p><strong>.gitignore文件的作用</strong></p>
+<p>在Git版本控制系统中，<code>.gitignore</code>文件扮演着至关重要的角色。它的主要作用是指定哪些文件或文件夹应该被Git忽略，即不被纳入版本控制之中。这意味着，即使你对这些文件进行了修改或添加，这些改动也不会被Git追踪，更不会被提交到远程仓库中。</p>
+<p><code>.gitignore</code>文件通常放置在项目的根目录下，其中每一行都定义了一个模式，用于匹配要忽略的文件或文件夹。这些模式使用简单的通配符语法，如<code>*</code>表示任意字符序列，<code>/</code>表示目录分隔符等。</p>
+<p>例如，你可以在<code>.gitignore</code>文件中添加如下规则：</p>
+<ul>
+<li><code>*.log</code>：忽略所有以<code>.log</code>结尾的文件。</li>
+<li><code>doc/</code>：忽略名为<code>doc</code>的整个目录及其所有内容。</li>
+<li><code>temp*.txt</code>：忽略所有以<code>temp</code>开头并以<code>.txt</code>结尾的文件。</li>
+</ul>
+<p>需要注意的是，<code>.gitignore</code>文件只对尚未被Git追踪的文件有效。换句话说，如果一个文件已经被Git追踪并提交到了仓库中，即使你在<code>.gitignore</code>文件中添加了针对该文件的规则，Git也不会停止追踪该文件。如果你想要让Git停止追踪某个已经被追踪的文件，你需要先从Git的索引中删除该文件（使用<code>git rm --cached &lt;file&gt;</code>命令），然后再提交更改。</p>
+<p>此外，<code>.gitignore</code>文件还支持全局设置。你可以在用户主目录下的<code>.gitignore_global</code>文件中定义全局的忽略规则，这样所有项目都会遵循这些规则。如果你想要在项目中使用全局的忽略规则，但又不想完全复制这些规则到每个项目的<code>.gitignore</code>文件中，你可以在项目的<code>.gitignore</code>文件中使用<code>!/.gitignore_global</code>规则来引入全局规则。</p>
+<p>总之，<code>.gitignore</code>文件是Git版本控制系统中非常重要的一个组成部分，它帮助开发者有效地管理项目中的文件，避免不必要的版本控制开销。通过合理地配置<code>.gitignore</code>文件，你可以更加灵活地控制哪些文件应该被纳入版本控制之中，从而提高开发效率和团队协作的顺畅性。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://retuze.github.io/sky">Retuze</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://retuze.github.io/sky/2024/02/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">https://retuze.github.io/sky/2024/02/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://retuze.github.io/sky" target="_blank">RETUZE</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://avatars.githubusercontent.com/u/75458480?v=4" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/75458480?v=4" onerror="this.onerror=null;this.src='/sky/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Retuze</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/sky/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/sky/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/sky/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/retuze"><i class="fab fa-github"></i><span>主页 Github</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">如果你在使用中遇到问题，请到 <a target="_blank" rel="noopener" href="https://github.com/Retuze/sky/issues">Github Issues</a> 进行反馈.</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/sky/2024/02/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="git常用命令">git常用命令</a><time datetime="2024-02-22T13:16:22.000Z" title="发表于 2024-02-22 21:16:22">2024-02-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/sky/2023/12/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E5%86%99%E4%B8%AA0-96%E5%AF%B8OLED%E9%A9%B1%E5%8A%A8/" title="嵌入式开发笔记-写个0.96寸OLED驱动">嵌入式开发笔记-写个0.96寸OLED驱动</a><time datetime="2023-12-08T10:35:09.000Z" title="发表于 2023-12-08 18:35:09">2023-12-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/sky/2023/12/06/%E8%87%AA%E5%88%B6PD%E8%AF%B1%E9%AA%97%E5%99%A8-FUSB302%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/" title="自制PD诱骗器-FUSB302调试笔记">自制PD诱骗器-FUSB302调试笔记</a><time datetime="2023-12-05T17:10:29.000Z" title="发表于 2023-12-06 01:10:29">2023-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/sky/2023/11/29/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0-%E5%86%99%E4%B8%80%E4%B8%AAWS2812%E9%A9%B1%E5%8A%A8/" title="嵌入式开发笔记-写一个WS2812驱动">嵌入式开发笔记-写一个WS2812驱动</a><time datetime="2023-11-29T14:01:41.000Z" title="发表于 2023-11-29 22:01:41">2023-11-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/sky/2023/11/29/ESP32%E5%B5%8C%E5%85%A5%E7%BD%91%E9%A1%B5%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/" title="ESP32嵌入网页的三种方法">ESP32嵌入网页的三种方法</a><time datetime="2023-11-28T17:06:06.000Z" title="发表于 2023-11-29 01:06:06">2023-11-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Retuze</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/sky/js/utils.js"></script><script src="/sky/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '796e9a33d39a637b2ddf',
+      clientSecret: 'c701c0d5a802786eefa13bb13895f8f910319c1c',
+      repo: 'sky',
+      owner: 'retuze',
+      admin: ['retuze'],
+      id: '7a4a5e06d12c735e7cab156595683fe4',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+      await getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
